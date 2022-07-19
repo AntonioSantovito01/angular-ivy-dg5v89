@@ -1,18 +1,22 @@
 export type BeerStyle =
-  | 'Ale'
-  | 'Gose'
-  | 'Ipa'
-  | 'Lager'
-  | 'Pilsner'
-  | 'Heat'
-  | 'Saison';
+  | 'ALE'
+  | 'GOSE'
+  | 'IPA'
+  | 'LAGER'
+  | 'PALE_ALE'
+  | 'PILSNER'
+  | 'PORTER'
+  | 'SAISON'
+  | 'STOUT'
+  | 'HEAT'
+  | 'WHEAT';
 
 export interface Beer {
   id: number;
   beerName: string;
-  berrStyle: BeerStyle;
+  beerStyle: BeerStyle;
   upc: string;
   price: number;
-  createDate: Date;
+  createdDate: Date;
   lastModifiedDate: Date;
 }
