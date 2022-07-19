@@ -1,3 +1,14 @@
-<ul *ngFor="let beer of beers">
-  <li>{{ beer.beerName }}</li>
-</ul>
+<h1>Lista delle birre</h1>
+
+<div class="row row-cols-1 row-cols-md-2 g-4">
+<div class="card shadow mt-3 mx-3" style="width: 18rem;"  *ngFor="let beer of beers" >
+<img src="{{beer.image}}" class="card-img-top" alt="...">
+<div class="card-body">
+<h6 class="card-title">Nome della birra: <b>{{ beer.beerName }}</b></h6>
+<h6 class="card-text">Price: <b>{{ beer.price }}€</b></h6>
+</div>
+</div>
+</div>
+
+
+

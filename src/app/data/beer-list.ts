@@ -9,6 +9,8 @@ export const beersData: Beer[] = [
     price: 93.13,
     createdDate: new Date('05-07-2022 07:34:39'),
     lastModifiedDate: new Date('10-08-2022 07:34:39'),
+    image:
+      'https://www.royalbeer.it/wp-content/uploads/2020/05/birra-ale-birra-lager.jpg',
   },
   {
     id: 2,
@@ -18,6 +20,8 @@ export const beersData: Beer[] = [
     price: 27.49,
     createdDate: new Date('05-07-2022 07:34:39'),
     lastModifiedDate: new Date('05-07-2022 07:34:39'),
+    image:
+      'https://www.royalbeer.it/wp-content/uploads/2020/05/birra-ale-birra-lager.jpg',
   },
   {
     id: 3,
@@ -27,6 +31,8 @@ export const beersData: Beer[] = [
     price: 10.91,
     createdDate: new Date('05-07-2022 07:34:39'),
     lastModifiedDate: new Date('05-07-2022 07:34:39'),
+    image:
+      'https://www.royalbeer.it/wp-content/uploads/2020/05/birra-ale-birra-lager.jpg',
   },
   {
     id: 4,
@@ -36,6 +42,8 @@ export const beersData: Beer[] = [
     price: 53.71,
     createdDate: new Date('05-07-2022 07:34:39'),
     lastModifiedDate: new Date('05-07-2022 07:34:39'),
+    image:
+      'https://www.royalbeer.it/wp-content/uploads/2020/05/birra-ale-birra-lager.jpg',
   },
   {
     id: 5,
@@ -45,6 +53,8 @@ export const beersData: Beer[] = [
     price: 7.7,
     createdDate: new Date('05-07-2022 07:34:39'),
     lastModifiedDate: new Date('05-07-2022 07:34:39'),
+    image:
+      'https://www.royalbeer.it/wp-content/uploads/2020/05/birra-ale-birra-lager.jpg',
   },
   {
     id: 6,
@@ -54,6 +64,8 @@ export const beersData: Beer[] = [
     price: 30.43,
     createdDate: new Date('05-07-2022 07:34:39'),
     lastModifiedDate: new Date('05-07-2022 07:34:39'),
+    image:
+      'https://www.royalbeer.it/wp-content/uploads/2020/05/birra-ale-birra-lager.jpg',
   },
   {
     id: 7,
@@ -63,6 +75,8 @@ export const beersData: Beer[] = [
     price: 39.6,
     createdDate: new Date('05-07-2022 07:34:39'),
     lastModifiedDate: new Date('05-07-2022 07:34:39'),
+    image:
+      'https://www.royalbeer.it/wp-content/uploads/2020/05/birra-ale-birra-lager.jpg',
   },
   {
     id: 8,
@@ -72,5 +86,7 @@ export const beersData: Beer[] = [
     price: 93.14,
     createdDate: new Date('05-07-2022 07:34:39'),
     lastModifiedDate: new Date('05-07-2022 07:34:39'),
+    image:
+      'https://www.royalbeer.it/wp-content/uploads/2020/05/birra-ale-birra-lager.jpg',
   },
 ];

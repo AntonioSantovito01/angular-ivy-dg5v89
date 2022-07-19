@@ -19,4 +19,5 @@ export interface Beer {
   price: number;
   createdDate: Date;
   lastModifiedDate: Date;
+  image: string;
 }
