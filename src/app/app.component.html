@@ -1,20 +1,24 @@
 <nav class="navbar navbar-expand-lg bg-dark">
   <h3 class="navbar-brand text-white mx-3">Beer App</h3>
-  <div class="collapse navbar-collapse d-end" id="navbarNavAltMarkup">
-    <div class="navbar-nav links text-end">
-      <a
-        class="nav-link active text-end"
-        routerLink="/add"
-        routerLinkActive="router-link-active"
-        >Add</a
-      >
-      <a
-        class="nav-link active text-end"
-        routerLink="/list"
-        routerLinkActive="router-link-active"
-        >List</a
-      >
-    </div>
+  <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+    <ul class="navbar-nav text-end">
+      <li class="nav-item">
+        <a
+          class="nav-link active text-end"
+          routerLink="/add"
+          routerLinkActive="router-link-active"
+          >Add</a
+        >
+      </li>
+      <li class="nav-item">
+        <a
+          class="nav-link active text-end"
+          routerLink="/list"
+          routerLinkActive="router-link-active"
+          >List</a
+        >
+      </li>
+    </ul>
   </div>
 </nav>
 <router-outlet></router-outlet>
