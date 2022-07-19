@@ -1,24 +1,25 @@
 import { NgModule } from '@angular/core';
-import { CommonModule } from '@angular/common';
-import { Route } from '@angular/router';
-import { AppComponent } from '../../app.component';
+import { Route, RouterModule } from '@angular/router';
+import { BeerListComponent } from '../../component/beer-list/beer-list.component';
 
-const routes : Route[]=[
-{
-  path:"",
-  component:AppComponent
-},
-{
-  path:"add",
-  component:
-}
-
-
-
+const routes: Route[] = [
+  {
+    path: '',
+    redirectTo: '/list',
+    pathMatch: 'full',
+  },
+  {
+    path: '/list',
+    component: BeerListComponent,
+  },
+  {
+    path: '/add',
+    component: BeerListComponent,
+  },
 ];
 
 @NgModule({
-  imports: [CommonModule],
-  exports: [],
+  imports: [RouterModule.forRoot(routes)],
+  exports: [RouterModule],
 })
 export class AppRoutingModule {}
