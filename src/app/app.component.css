@@ -2,8 +2,12 @@ p {
   font-family: Lato;
 }
 
-router-link-active {
+.router-link-active {
   color: darkslateblue !important;
 
   font-weight: bold;
+}
+.navbar-nav {
+  position: absolute;
+  right: 8%;
 }
