@@ -5,13 +5,15 @@ import { Beer } from '../model/model';
 @Injectable({ providedIn: 'root' })
 export class BeerService {
   constructor() {}
-  private beers: Beer[] = beersData;
+  beers: Beer[] = beersData;
 
   getBeerList() {
     return this.beers;
   }
 
-  deleteBeer(index) {
-    this.beers = this.beers.splice(index, 1);
+  deleteBeer(item: Beer) {
+    this.beers = this.beers.filter((beer) => beer.id !== item.id);
+
+    console.log(this.beers);
   }
 }
