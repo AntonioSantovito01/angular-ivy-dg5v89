@@ -13,19 +13,19 @@ export type BeerStyle =
   | 'HEAT'
   | 'WHEAT';
 
-  export const allBeerTypes: BeerStyle[] = [
-    'ALE',
-    'GOSE',
-    'IPA',
-    'LAGER',
-    'PALE_ALE',
-    'PILSNER',
-    'PORTER',
-    'SAISON',
-    'STOUT',
-    'HEAT',
-    'WHEAT',
-  ];
+export const allBeerTypes: BeerStyle[] = [
+  'ALE',
+  'GOSE',
+  'IPA',
+  'LAGER',
+  'PALE_ALE',
+  'PILSNER',
+  'PORTER',
+  'SAISON',
+  'STOUT',
+  'HEAT',
+  'WHEAT',
+];
 
 export interface Beer {
   id: number;
@@ -40,9 +40,8 @@ export interface Beer {
 
 export interface BeerForm {
   beerName: FormControl<string | undefined | null>;
-  beerStyle:FormControl<BeerStyle| undefined|null>;
-  upc:FormControl<string | undefined | null>;
-  price:FormControl<number | undefined | null>;
-
-
+  beerStyle: FormControl<BeerStyle | undefined | null>;
+  upc: FormControl<string | undefined | null>;
+  price: FormControl<number | undefined | null>;
+  image: FormControl<string | undefined | null>;
 }

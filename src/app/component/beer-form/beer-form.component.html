@@ -2,7 +2,6 @@
   <div class="card-header">Add Beer</div>
   <div class="card-body">
     <form [formGroup]="beerForm">
-      <label for="beerName">Beer Name</label>
       <input
         type="text"
         class="form-control mb-3"
@@ -37,6 +36,17 @@
             : ' '
         "
       />
+      <input
+        type="text"
+        class="form-control mb-3"
+        formControlName="image"
+        placeholder="Inserisci l'url dell'immagine"
+        [ngClass]="
+          beerForm.controls.image.invalid && beerForm.controls.image.touched
+            ? 'is-invalid'
+            : ' '
+        "
+      />
       <select
         class="form-select mb-3"
         formControlName="beerStyle"
@@ -48,10 +58,21 @@
             : ' '
         "
       >
+        <option [ngValue]="null" disabled>Choose your beer style</option>
         <option *ngFor="let beerStyle of beerType" [ngValue]="beerStyle">
           {{ beerStyle }}
         </option>
       </select>
+
+      <button
+        class="btn btn-success"
+        type="submit"
+        [disabled]="beerForm.invalid"
+        (click)="onSubmit()"
+        routerLink="/list"
+      >
+        Submit
+      </button>
     </form>
   </div>
 </div>

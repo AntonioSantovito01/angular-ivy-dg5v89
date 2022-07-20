@@ -9,6 +9,7 @@ import { BeerService } from '../../sevices/beer.service';
 })
 export class BeerComponent implements OnInit {
   @Input() beer: Beer;
+  
   constructor(public beerService: BeerService) {}
 
   onDelete(beer: Beer) {
