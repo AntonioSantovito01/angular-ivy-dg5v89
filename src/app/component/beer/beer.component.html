@@ -17,6 +17,13 @@
       <td>{{ beer.upc }}</td>
       <td>{{ beer.lastModifiedDate | date }}</td>
       <td><img src="{{ beer.image }}" /></td>
+      <button
+        type="button"
+        class="btn btn-danger bg-danger mt-4 text-white"
+        (click)="onDelete(beer)"
+      >
+        Elimina
+      </button>
     </tr>
   </tbody>
 </table>

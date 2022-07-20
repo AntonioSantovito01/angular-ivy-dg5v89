@@ -9,8 +9,12 @@ import { BeerService } from '../../sevices/beer.service';
 })
 export class BeerComponent implements OnInit {
   @Input() beer: Beer;
-  constructor(private beersrv: BeerService) {}
-  beers: Beer[] = this.beersrv.getBeerList();
+  constructor(private beerSrv: BeerService) {}
+  beers: Beer[] = this.beerSrv.getBeerList();
+
+  onDelete(beer: Beer) {
+    this.beerSrv.deleteBeer(beer);
+  }
 
   ngOnInit() {}
 }
