@@ -12,9 +12,11 @@
     <tr *ngFor="let beer of beers">
       <th scope="row">{{ beer.id }}</th>
       <td>{{ beer.beerName }}</td>
-      <td>{{ beer.price }}</td>
+      <td>{{ beer.beerStyle }}</td>
+      <td>{{ beer.price }}€</td>
       <td>{{ beer.upc }}</td>
-      <td>{{ beer.createdDate }}</td>
+      <td>{{ beer.lastModifiedDate | date }}</td>
+      <td><img src="{{ beer.image }}" /></td>
     </tr>
   </tbody>
 </table>
