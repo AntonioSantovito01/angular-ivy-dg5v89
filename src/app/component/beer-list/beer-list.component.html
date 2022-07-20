@@ -9,7 +9,7 @@
     <img src="{{ beer.image }}" class="card-img-top" alt="..." />
     <div class="card-body">
       <h6 class="card-title">
-        Nome della birra: <b>{{ beer.beerName }}</b>
+        Nome della birra:<app-beer [beer]="beer"></app-beer>
       </h6>
       <h6 class="card-text">
         Price: <b>{{ beer.price }}€</b>
@@ -20,8 +20,8 @@
 </div>-->
 
 <div class="card shadow">
-<h5 class="card-header">Beer list</h5>
-<div class="card-body">
-<app-beer></app-beer>
-</div>
+  <h5 class="card-header">Beer list</h5>
+  <div class="card-body">
+      <app-beer></app-beer>
+  </div>
 </div>

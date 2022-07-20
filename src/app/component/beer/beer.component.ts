@@ -1,18 +1,18 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
 import { Beer } from '../../model/model';
 import { BeerService } from '../../sevices/beer.service';
 
 @Component({
   selector: 'app-beer',
   templateUrl: './beer.component.html',
-  styleUrls: ['./beer.component.css']
+  styleUrls: ['./beer.component.css'],
 })
 export class BeerComponent implements OnInit {
+  @Input() beer: Beer;
 
-  constructor(private beerService:BeerService) { }
-  beers: Beer[] = this.beerService.getBeerList();
+  constructor(private beersrv: BeerService) {}
 
-  ngOnInit() {
-  }
+  beers: Beer[] = this.beersrv.getBeerList();
 
+  ngOnInit() {}
 }

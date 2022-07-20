@@ -1,3 +1,20 @@
-<ul class="list-group" *ngFor="let beer of beers">
-  <li>{{ beer.beerName }}</li>
-</ul>
+<table class="table">
+  <thead>
+    <tr>
+      <th scope="col">Id</th>
+      <th scope="col">Name</th>
+      <th scope="col">Price</th>
+      <th scope="col">Upc</th>
+      <th scope="col">Creation Date</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let beer of beers">
+      <th scope="row">{{ beer.id }}</th>
+      <td>{{ beer.beerName }}</td>
+      <td>{{ beer.price }}</td>
+      <td>{{ beer.upc }}</td>
+      <td>{{ beer.createdDate }}</td>
+    </tr>
+  </tbody>
+</table>
