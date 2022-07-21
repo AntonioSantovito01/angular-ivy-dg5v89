@@ -10,6 +10,6 @@ export const beerReducers = createReducer(
   initialBeerState,
   on(Actions.deleteBeerAction, (state: Beerstate, arg: { id: number }) => ({
     ...state,
-    list: state.list.filter(arg => arg !== arg.id)
+    list: state.list.filter((beer) => arg.id !== beer.id)
   }))
 );
