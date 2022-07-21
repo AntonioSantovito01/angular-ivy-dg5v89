@@ -1,4 +1,5 @@
 import { Component, Input, OnInit } from '@angular/core';
+import { Observable } from 'rxjs';
 import { Beer } from '../../model/model';
 import { BeerService } from '../../sevices/beer.service';
 
@@ -9,8 +10,11 @@ import { BeerService } from '../../sevices/beer.service';
 })
 export class BeerComponent implements OnInit {
   @Input() beer: Beer;
-  
-  constructor(public beerService: BeerService) {}
+  beerList: Observable<Beer[]>;
+
+  constructor(public beerService: BeerService) {
+    this.beerList = beerService.getBeerList();
+  }
 
   onDelete(beer: Beer) {
     this.beerService.deleteBeer(beer);

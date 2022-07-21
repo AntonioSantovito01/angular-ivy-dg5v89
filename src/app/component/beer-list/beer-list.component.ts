@@ -13,7 +13,5 @@ export class BeerListComponent implements OnInit {
 
   constructor(private beerService: BeerService) {}
 
-  beers: Beer[] = this.beerService.getBeerList();
-
   ngOnInit() {}
 }
