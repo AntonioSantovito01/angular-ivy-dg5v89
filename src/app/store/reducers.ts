@@ -1,6 +1,7 @@
 import { createReducer, on } from '@ngrx/store';
 
 import { beersData } from '../data/beer-list';
+import { Beer } from '../model/model';
 import { Beerstate } from '../model/state';
 import * as Actions from '../store/actions';
 
@@ -11,5 +12,9 @@ export const beerReducers = createReducer(
   on(Actions.deleteBeerAction, (state: Beerstate, arg: { id: number }) => ({
     ...state,
     list: state.list.filter((beer) => arg.id !== beer.id),
+  })),
+  on(Actions.addBeerAction, (state: Beerstate, arg: {beer:Beer }) => ({
+    ...state,
+    list: state.list.push(beer);
   }))
 );
