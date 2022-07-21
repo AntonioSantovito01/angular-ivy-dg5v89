@@ -13,8 +13,10 @@ export const beerReducers = createReducer(
     ...state,
     list: state.list.filter((beer) => arg.id !== beer.id),
   })),
-  on(Actions.addBeerAction, (state: Beerstate, arg: {beer:Beer }) => ({
-    ...state,
-    list: state.list.push(beer);
-  }))
+  on(Actions.addBeerAction, (state: Beerstate, arg: { beer: Beer }) => {
+    return {
+      ...state,
+      list: [...state.list, arg.beer],
+    };
+  })
 );
